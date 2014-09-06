@@ -4,3 +4,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
+mizzao:bootstrap-3
+iron:router
+less
