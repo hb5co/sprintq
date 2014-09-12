@@ -3,11 +3,38 @@
 @text-on-dark: #f1f1f1;
 
 
+/* Button Overrideds
+=========================================== */
+.btn-success{
+  background-color: @green;
+}
+
+/* Navigation
+=========================================== */
 nav.navbar{
   background-color: @green;
   padding:10px 0 15px 0;
   border-radius: 0px;
+  border:none;
+  margin-bottom: 0px;
 }
-.banner{
+
+/* Content
+=========================================== */
+#banner{
   background-color: @dark-grey;
+  color:@text-on-dark;
+  padding:40px 0;
+  
+  #add-new-sprint{
+    input[type="text"]{
+      padding:25px;
+    }
+    button{
+      padding:15px;
+    }
+  } 
+}
+#content{
+  padding:50px 0;
 }
