@@ -1,12 +1,33 @@
 <template name="sprint">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <p><strong>Issues for sprint {{title}}</strong></p>
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>
+                        Issues for
+                        <strong>{{title}}</strong>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Issues
+                        </div>
+                        <div class="list-group">
+                            {{#each issues}}
+                            <p><a href="{{issue}}" class="list-group-item">{{title}}</a>
+                            </p>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    {{> rankings}}
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="list-group">
-      {{#each issues}}
-        <p><a href="{{title}}" class="list-group-item">{{title}}</a></p>
-      {{/each}}
-    </div>
-  </div>
+
 </template>
