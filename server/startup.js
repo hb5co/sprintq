@@ -44,9 +44,25 @@ Meteor.startup(function () {
       Accounts.createUser(users[i]);
     }
     **/
+    console.log('Spawning sample sprints...');
+
     var sprints = [
       {
         title: 'SprintQ',
+        issues: [
+          {
+            title: "Issue 1",
+            difficulty: 1,
+          },
+          {
+            title: "Issue 2",
+            difficulty: 2,
+          },
+          {
+            title: "Issue 3",
+            difficulty: 3,
+          },
+        ],
         // userId: randUserId()
       },
       {
