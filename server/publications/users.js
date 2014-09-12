@@ -3,7 +3,6 @@ Meteor.publish("users", function () {
     return Meteor.users.find({}, {fields: {
       '_id': true,
       'createdAt': true,
-      'profile': true,
       'profile.login': true,
       'profile.name': true,
       'profile.avatar_url': true,
