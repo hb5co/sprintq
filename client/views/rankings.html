@@ -10,7 +10,7 @@ http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-panels.php
       <!-- List group -->
       <div class="list-group">
         {{#each users}}
-          <a href="#" class="list-group-item"><img src="{{profile.avatar_url}}" height="32" width="32"> {{profile.name}}<span class="badge">49</span></a>
+          <a href="{{profile.html_url}}" class="list-group-item"><img src="{{profile.avatar_url}}" height="32" width="32"> {{profile.name}}<span class="badge">49</span></a>
         {{/each}}
       </div>
   </div>
