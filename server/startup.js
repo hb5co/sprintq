@@ -7,9 +7,12 @@ var randUserId = function() {
 var randPassword = function() {
   return Math.random().toString(36);
 };
-/**
+
+console.log('Sprints found: ' + Sprints.find().count());
+
 Meteor.startup(function () {
   if (Sprints.find().count() === 0) {
+    /**
     var users = [
       {
         email: 'BobFranks@example.com',
@@ -40,31 +43,31 @@ Meteor.startup(function () {
     for (var i = 0; i < users.length; i++) {
       Accounts.createUser(users[i]);
     }
-
+    **/
     var sprints = [
       {
         title: 'Lorem ipsum dolor sit amet',
-        userId: randUserId()
+        // userId: randUserId()
       },
       {
         title: 'Praesent at sollicitudin nisi',
-        userId: randUserId()
+        // userId: randUserId()
       },
       {
         title: 'Fusce vel porttitor dui',
-        userId: randUserId()
+        // userId: randUserId()
       },
       {
         title: 'Curabitur et vulputate dolor',
-        userId: randUserId()
+        // userId: randUserId()
       },
       {
         title: 'Donec elementum tellus a magna bibendum',
-        userId: randUserId()
+        // userId: randUserId()
       },
       {
         title: 'Aenean et tortor pulvinar',
-        userId: randUserId()
+        // userId: randUserId()
       }
     ];
 
@@ -73,4 +76,3 @@ Meteor.startup(function () {
     }
   }
 });
-**/
