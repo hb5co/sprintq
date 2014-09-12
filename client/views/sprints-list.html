@@ -1,5 +1,7 @@
 <template name="sprintsList">
-  {{#each sprints}}
-    <p><a href="">{{sprintTitle}}</a></p>
-  {{/each}}
+  <div class="list-group">
+    {{#each sprints}}
+      <p><a href="" class="list-group-item">{{sprintTitle}}</a></p>
+    {{/each}}
+  </div>
 </template>
