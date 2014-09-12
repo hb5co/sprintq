@@ -1,3 +1,4 @@
 Template.sprintsList.sprints = function () {
-  return Sprints.find({});
+  var sprintSearchQuery = Session.get('sprintSearchQuery');
+  return Sprints.find({sprintTitle: {$regex: sprintSearchQuery, $options : "i"}});
 };

@@ -1,9 +1,13 @@
 <template name="sprintsList">
   <div class="panel panel-default">
-  <div class="panel-heading"><strong>Sprints</strong></div>
+    <div class="panel-heading">
+      <div id="sprint-search-template">
+        {{> sprintSearch}}
+      </div>
+    </div>
     <div class="list-group">
       {{#each sprints}}
-        <p><a href="" class="list-group-item">{{Title}}</a></p>
+        <p><a href="" class="list-group-item">{{sprintTitle}}</a></p>
       {{/each}}
     </div>
   </div>
