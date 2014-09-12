@@ -15,13 +15,13 @@ During a sprint, just "claim" your issue so others know you are working on it.
 
 To set up the Github login credentials, create the file server/github-config.js and insert this code:
 <pre>
-`ServiceConfiguration.configurations.remove({
+<code>ServiceConfiguration.configurations.remove({
   service: "github"
 });
 ServiceConfiguration.configurations.insert({
   service: 'github',
   clientId: 'clientId',
   secret: 'githubAPISecret'
-});`
+});</code>
 </pre>
 To create the GitHub secret you see above, see [this GitHub blog post](https://github.com/blog/1509-personal-api-tokens).
