@@ -1,3 +1,11 @@
 <template name="sprint">
-  <h1>{{title}}</h1>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+    </div>
+    <div class="list-group">
+      {{#each issues}}
+        <p><a href="{{issue}}" class="list-group-item">{{title}}</a></p>
+      {{/each}}
+    </div>
+  </div>
 </template>
