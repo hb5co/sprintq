@@ -46,7 +46,7 @@ Meteor.startup(function () {
     **/
     var sprints = [
       {
-        title: 'Lorem ipsum dolor sit amet',
+        title: 'SprintQ',
         // userId: randUserId()
       },
       {
