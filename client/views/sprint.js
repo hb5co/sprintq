@@ -4,7 +4,6 @@ Template.sprint.helpers({
   }
 });
 
-Template.issuesList.issues = function () {
-  var sprintSearchQuery = Session.get('sprintSearchQuery');
-  return Sprints.find({title: {$regex: sprintSearchQuery, $options : "i"}}, {sort: {createdAt:-1}});
+Template.sprint.issues = function () {
+  return Sprints.find({_id: {$in: issues}});
 };
