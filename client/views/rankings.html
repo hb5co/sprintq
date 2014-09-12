@@ -1,10 +1,17 @@
+<!-- reference:
+
+http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-panels.php
+
+-->
 <template name="rankings">
   <div id="rankings" class="panel panel-default">
     <!-- Default panel contents -->
       <div class="panel-heading"><strong>Rankings</strong></div>
       <!-- List group -->
       <div class="list-group">
-          <a href="#" class="list-group-item"><span class="badge">49</span> shrop</a>
+        {{#each users}}
+          <a href="#" class="list-group-item"><img src="{{profile.avatar_url}}" height="32" width="32"> {{profile.name}}<span class="badge">49</span></a>
+        {{/each}}
       </div>
   </div>
 </template>
