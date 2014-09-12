@@ -1,10 +1,18 @@
 <template name="home">
+  <div class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+          {{#if currentUser}}
+            {{> addSprint}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        {{#if currentUser}}
-          {{> addSprint}}
-        {{/if}}
         {{> sprintsList}}
       </div>
       <div class="col-md-4">
