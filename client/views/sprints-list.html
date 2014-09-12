@@ -6,9 +6,11 @@
       </div>
     </div>
     <div class="list-group">
-      {{#each sprints}}
-        <p><a href="sprint/{{_id}}" class="list-group-item">{{title}}</a></p>
-      {{/each}}
+      <ul id="sprintsList">
+        {{#each sprints}}
+          <li><a href="sprint/{{_id}}" class="list-group-item">{{title}} <input type="button" name="archiveSprint" class="btn btn-primary" value="Archive"></a></li>
+        {{/each}}
+      </ul>
     </div>
   </div>
 </template>

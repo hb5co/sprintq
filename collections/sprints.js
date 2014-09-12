@@ -15,6 +15,7 @@ Sprints.allow({
 Sprints.before.insert(function (userId, doc) {
   doc.createdAt = new Date();
   doc.archived = false;
+  doc.modifiedAt = Date.now();
 });
 
 // Stuff to do when a Sprint collection document is updated.
