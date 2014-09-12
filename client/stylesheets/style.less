@@ -1,6 +1,32 @@
 @green: #8CC63F;
 @dark-grey: #444;
 @text-on-dark: #f1f1f1;
+@trebuchet: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+
+
+/* Typography
+=========================================== */
+.btn,
+button{
+  font-family: @trebuchet;
+  font-weight: bold;
+}
+::-webkit-input-placeholder{ 
+  font-family: @trebuchet; 
+  font-weight: bold;
+}
+::-moz-placeholder{ 
+  font-family: @trebuchet; 
+  font-weight: bold;
+}
+:-ms-input-placeholder{ 
+  font-family: @trebuchet; 
+  font-weight: bold;
+}
+input:-moz-placeholder { 
+  font-family: @trebuchet; 
+  font-weight: bold;
+}
 
 
 /* Button Overrideds
@@ -29,6 +55,22 @@ nav.navbar{
   #add-new-sprint{
     input[type="text"]{
       padding:25px;
+
+      &::-webkit-input-placeholder{ 
+        font-family: @trebuchet; 
+        font-weight: bold;
+        font-size: 1.3em;
+      }
+      &::-moz-placeholder{ 
+        font-family: @trebuchet; 
+        font-weight: bold;
+        font-size: 1.3em;
+      }
+      &:-ms-input-placeholder{ 
+        font-family: @trebuchet; 
+        font-weight: bold;
+        font-size: 1.3em;
+      }
     }
     button{
       padding:15px;
