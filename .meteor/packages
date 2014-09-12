@@ -13,4 +13,5 @@ accounts-ui
 service-configuration
 force-ssl
 matb33:collection-hooks
+chrismbeckett:fontawesome4
 

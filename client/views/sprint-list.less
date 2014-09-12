@@ -21,14 +21,17 @@
     background: none;
   }
 }
-
-.sprints-list p.active {
-  -webkit-animation: highlight 10s infinite;
-  -ms-animation: highlight 10s infinite;
-  -o-animation: highlight 10s infinite;
-  animation: highlight 10s infinite;
-}#sprintsList {
-  list-style-type: none;
-  padding:0;
-  margin:0;
+.sprints-list{
+  a{
+    display: block;
+    text-decoration: none;
+  }
+  p{
+    &.active{
+      -webkit-animation: highlight 10s infinite;
+      -ms-animation: highlight 10s infinite;
+      -o-animation: highlight 10s infinite;
+      animation: highlight 10s infinite;
+    }
+  }
 }

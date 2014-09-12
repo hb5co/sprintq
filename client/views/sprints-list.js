@@ -4,7 +4,7 @@ Template.sprintsList.sprints = function () {
 };
 
 Template.sprintsList.events({
-  'click input[name="archiveSprint"]': function(e) {
+  'click #archiveSprint': function(e) {
     e.preventDefault();
     Sprints.update({_id: this._id}, {$set: {archived: true}});
   }
