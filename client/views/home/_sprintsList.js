@@ -7,6 +7,14 @@ Template.sprintsList.editingSprintTitleId = function () {
   return Session.equals('editingSprintTitleId', this._id);
 }
 
+Template.sprintsList.loggedInColumnWidth = function() {
+  if (Meteor.user()) {
+    return 9;
+  } else {
+    return 12;
+  }
+};
+
 Template.sprintsList.events({
   'click #archiveSprint': function(e) {
     e.stopPropagation();
@@ -16,7 +24,10 @@ Template.sprintsList.events({
     
     // getting clicked button and it's table row
     var archiveSprint = $(e.currentTarget).parent().parent();
-    archiveSprint.fadeOut(500, function(){
+    
+    archiveSprint.addClass('animated fadeOutLeftBig archived');
+
+    archiveSprint.delay(250).slideUp(500, function(){
       Sprints.update({_id: sprintId}, {$set: {archived: true}});
     });
   },
