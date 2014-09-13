@@ -53,24 +53,27 @@ Meteor.startup(function () {
         title: 'SprintQ',
         issues: [
           {
-            title: "Issue 1",
-            difficulty: 1,
+            title: "Need to be able to edit sprint titles from the home page",
+            difficulty: 2,
             claimedBy: 'none',
-            closed: false
+            closed: false,
+            html_url: 'https://github.com/shrop/sprintq/issues/33'
           },
           {
-            title: "Issue 2",
+            title: "Sort the sprints alphabetically on the home page",
             difficulty: 2,
             claimedBy: 'none',
             closed: true,
-            closedBy: 'none'
+            closedBy: 'none',
+            html_url: 'https://github.com/shrop/sprintq/issues/26'
           },
           {
-            title: "Issue 3",
+            title: "Paginate the sprints on the home page",
             difficulty: 3,
             claimedBy: 'none',
             closed: true,
-            closedBy: 'none'
+            closedBy: 'none',
+            html_url: 'https://github.com/shrop/sprintq/issues/25'
           },
         ],
         // userId: randUserId()
