@@ -8,7 +8,7 @@ Template.sprintsList.editingSprintTitleId = function () {
 }
 
 Template.sprintsList.events({
-  'click #editSprintTitleBtn': function(e) {
+  'click #archiveSprint': function(e) {
     e.stopPropagation();
     e.preventDefault();
 
@@ -18,7 +18,11 @@ Template.sprintsList.events({
     var archiveSprint = $(e.currentTarget).parent().parent();
     archiveSprint.fadeOut(500, function(){
       Sprints.update({_id: sprintId}, {$set: {archived: true}});
-      Session.set('editingSprintTitleId', sprintId);
     });
+  },
+  'click #editSprintTitleBtn': function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    Session.set('editingSprintTitleId', this._id);
   }
 });
