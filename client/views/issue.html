@@ -1,0 +1,10 @@
+<template name="issue">
+  <p class="issue {{closedClass}}"><a href="{{html_url}}" class="list-group-item">
+
+    <span class="done">
+      <input type="checkbox" name="closed" {{closedChecked}} />
+    </span>
+
+    <span class="subject">{{title}}</span> {{difficulty}}
+  </a></p>
+</template>

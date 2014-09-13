@@ -12,7 +12,7 @@ console.log('Sprints found: ' + Sprints.find().count());
 
 Meteor.startup(function () {
   if (Sprints.find().count() === 0) {
-    /**
+
     var users = [
       {
         email: 'BobFranks@example.com',
@@ -40,10 +40,12 @@ Meteor.startup(function () {
       }
     ];
 
+    console.log(users);
+/**
     for (var i = 0; i < users.length; i++) {
       Accounts.createUser(users[i]);
     }
-    **/
+**/
     console.log('Spawning sample sprints...');
 
     var sprints = [
@@ -53,14 +55,22 @@ Meteor.startup(function () {
           {
             title: "Issue 1",
             difficulty: 1,
+            claimedBy: 'none',
+            closed: false
           },
           {
             title: "Issue 2",
             difficulty: 2,
+            claimedBy: 'none',
+            closed: true,
+            closedBy: 'none'
           },
           {
             title: "Issue 3",
             difficulty: 3,
+            claimedBy: 'none',
+            closed: true,
+            closedBy: 'none'
           },
         ],
         // userId: randUserId()
