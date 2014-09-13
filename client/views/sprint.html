@@ -17,7 +17,9 @@
                         </div>
                         <div class="list-group">
                             {{#each issues}}
-                              <p><a href="" class="list-group-item">{{title}} {{difficulty}}</a></p>
+                              {{> issue}}
+                            {{else}}
+                              <p><a href="" class="list-group-item">No issues yet.</a></p>
                             {{/each}}
                         </div>
                     </div>
