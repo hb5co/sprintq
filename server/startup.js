@@ -67,23 +67,88 @@ Meteor.startup(function () {
       },
       {
         title: 'Praesent at sollicitudin nisi',
-        // userId: randUserId()
+        issues: [
+          {
+            title: "Issue 1",
+            difficulty: 1,
+          },
+          {
+            title: "Issue 2",
+            difficulty: 2,
+          },
+          {
+            title: "Issue 3",
+            difficulty: 3,
+          },
+        ],
       },
       {
         title: 'Fusce vel porttitor dui',
-        // userId: randUserId()
+        issues: [
+          {
+            title: "Issue 1",
+            difficulty: 1,
+          },
+          {
+            title: "Issue 2",
+            difficulty: 2,
+          },
+          {
+            title: "Issue 3",
+            difficulty: 3,
+          },
+        ],
       },
       {
         title: 'Curabitur et vulputate dolor',
-        // userId: randUserId()
+        issues: [
+          {
+            title: "Issue 1",
+            difficulty: 1,
+          },
+          {
+            title: "Issue 2",
+            difficulty: 2,
+          },
+          {
+            title: "Issue 3",
+            difficulty: 3,
+          },
+        ],
       },
       {
         title: 'Donec elementum tellus a magna bibendum',
-        // userId: randUserId()
+        issues: [
+          {
+            title: "Issue 1",
+            difficulty: 1,
+          },
+          {
+            title: "Issue 2",
+            difficulty: 2,
+          },
+          {
+            title: "Issue 3",
+            difficulty: 3,
+          },
+        ],
       },
       {
         title: 'Aenean et tortor pulvinar',
-        // userId: randUserId()
+        issues: [
+          {
+            title: "Issue 1",
+            difficulty: 1,
+          },
+          {
+            title: "Issue 2",
+            difficulty: 2,
+          },
+          {
+            title: "Issue 3",
+            difficulty: 3,
+          },
+        ]
       }
     ];
 
