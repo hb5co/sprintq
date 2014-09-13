@@ -1,7 +1,14 @@
 <template name="sprintSearch">
   <div id="sprint-search-template">
     <div class="row">
-      <div class="col-sm-5"><h4>Sprints | <a href="{{pathFor 'archived-sprints'}}">Archived Sprints</a></h4></div>
+      <div class="col-sm-5">
+        {{#if RouteIs 'archivedSprints'}}
+        <h2 class="block-title"><a href="{{pathFor 'home'}}">Sprints</a> | Archived Sprints</h2>
+        {{/if}}
+        {{#if RouteIs 'home'}}
+        <h2 class="block-title">Sprints | <a href="{{pathFor 'archivedSprints'}}">Archived Sprints</a></h2>
+        {{/if}}
+      </div>
       <div class="col-sm-7 pull-right">
         <form role="form" class="form-horizontal">
           <div id="sprintSearch" class="form-group">
