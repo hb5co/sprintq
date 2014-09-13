@@ -1,8 +1,23 @@
 @green: #8CC63F;
+@blue: #2D7586;
+@bg-yellow: #D9C845;
 @dark-grey: #444;
 @text-on-dark: #f1f1f1;
 @trebuchet: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
 
+
+/* Global
+=========================================== */
+body{
+  background-color: lighten(@green, 40%);
+}
+
+/* Helpers
+=========================================== */
+h2.block-title{
+  font-size: 1.5em;
+  margin:5px 0 0 0;
+}
 
 /* Typography
 =========================================== */
@@ -27,6 +42,9 @@ input:-moz-placeholder {
   font-family: @trebuchet;
   font-weight: bold;
 }
+a{
+  color:@blue;
+}
 
 /* UI Overrides
 =========================================== */
@@ -35,11 +53,34 @@ input:-moz-placeholder {
 .panel-heading{
   border-radius: 0px;
 }
+
 /* Button Overrideds
 =========================================== */
-.btn-success{
-  background-color: @green;
+.btn{
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+
+  &.btn-success{
+    background-color: @green;
+    border-color: @green;
+    &:hover{
+      background-color:lighten(@green,10%);
+      border-color:lighten(@green, 10%);
+    }
+  }
+  &.btn-primary{
+    background-color: @blue;
+    border-color: @blue;
+    &:hover{
+      background-color:lighten(@blue,10%);
+      border-color:lighten(@blue, 10%);
+    }
+  }
 }
+
 
 /* Navigation
 =========================================== */
@@ -60,6 +101,7 @@ nav.navbar{
   background-image: url(images/congruent_outline.png);
   background-attachment: fixed;
 
+<<<<<<< Updated upstream
 
   #add-new-sprint, #add-new-issue {
     input[type="text"]{
@@ -93,9 +135,10 @@ nav.navbar{
   padding:50px 0;
 }
 #login-buttons {
-  Float: right;
+  float: right;
   padding-right:30px
 }
 .navbar-header{
 	float: left;
 }
+
