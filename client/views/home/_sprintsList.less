@@ -1,3 +1,6 @@
+@green: #8CC63F;
+@blue: #2D7586;
+
 #sprintSearch {
   margin: 0;
 }
@@ -9,22 +12,21 @@
 /* Flash on new added */
 @keyframes highlight {
   0% {
-    background: red
+    background-color: @green;
   }
   100% {
-    border-left:10px solid green;
-    background: none;
+    background-color: none;
   }
 }
 @-webkit-keyframes highlight {
   0% {
-    background: red
+    background-color: @green;
   }
   100% {
-    border-left:10px solid green;
-    background: none;
+    background-color: none;
   }
 }
+
 .sprints-list {
   .sprint-row {
     padding:15px 0;
@@ -33,17 +35,15 @@
     &.archived {
       background-color: #fff;
     }
-    a{
+    a {
       display: block;
       text-decoration: none;
     }
-    p {
-      &.active {
-        -webkit-animation: highlight 10s infinite;
-        -ms-animation: highlight 10s infinite;
-        -o-animation: highlight 10s infinite;
-        animation: highlight 10s infinite;
-      }
+    &.highlight {
+      -webkit-animation: highlight 2.5s;
+      -ms-animation: highlight 2.5s;
+      -o-animation: highlight 2.5s;
+      animation: highlight 2.5s;
     }
   }
 }

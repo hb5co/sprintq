@@ -25,7 +25,7 @@ Template.sprintsList.events({
     // getting clicked button and it's table row
     var archiveSprint = $(e.currentTarget).parent().parent();
     
-    archiveSprint.addClass('animated fadeOutLeftBig archived');
+    archiveSprint.removeClass('highlight').addClass('animated fadeOutLeftBig archived');
 
     archiveSprint.delay(250).slideUp(500, function(){
       Sprints.update({_id: sprintId}, {$set: {archived: true}});
