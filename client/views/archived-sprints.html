@@ -1,0 +1,32 @@
+<template name="archivedSprints">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{> sprintSearch}}
+    </div>
+    <div class="sprints-list">
+      <table class="table table-hover">
+        <tbody>
+          {{#each sprints}}
+            <tr>
+              {{#if editingSprintTitleId}}
+                <td>
+                  {{> editSprintTitle}}
+                </td>
+              {{else}}
+                <td><a href="sprint/{{_id}}" class="block-level" >{{title}}</a></td>
+              {{/if}}
+              {{#if currentUser}}
+                <td>
+                  <button id="unarchiveSprint" class="btn btn-primary pull-right">
+                    <i class="fa fa-archive"></i> Unarchive
+                  </button>
+                  <button id="editSprintTitleBtn" class="btn btn-info pull-right">Edit</button>
+                </td>
+              {{/if}}
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>
