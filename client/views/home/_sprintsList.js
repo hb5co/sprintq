@@ -34,6 +34,10 @@ Template.sprintsList.events({
   'click #editSprintTitleBtn': function(e) {
     e.stopPropagation();
     e.preventDefault();
-    Session.set('editingSprintTitleId', this._id);
+    if (Session.equals('editingSprintTitleId', this._id)) {
+      Session.set('editingSprintTitleId', false);
+    } else {
+      Session.set('editingSprintTitleId', this._id);
+    }
   }
 });

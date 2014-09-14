@@ -42,6 +42,7 @@ minimongo@1.0.2
 mizzao:bootstrap-3@3.2.0
 mongo@1.0.4
 natestrauser:animate-css@3.1.2
+natestrauser:x-editable-bootstrap@1.5.2
 oauth2@1.0.0
 oauth@1.0.1
 observe-sequence@1.0.2
