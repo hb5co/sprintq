@@ -6,7 +6,16 @@ Template.archivedSprints.sprints = function () {
 Template.archivedSprints.events({
   'click #unarchiveSprint': function(e) {
     e.preventDefault();
-    Sprints.update({_id: this._id}, {$set: {archived: false}});
+    sprintId = this._id;
+    
+    // getting clicked button and it's table row
+    var unArchiveSprint = $(e.currentTarget).parent().parent();
+    
+    unArchiveSprint.removeClass('highlight').addClass('animated fadeOutLeftBig archived');
+
+    unArchiveSprint.delay(250).slideUp(500, function(){
+      Sprints.update({_id: sprintId}, {$set: {archived: false}});
+    });
   },
   'click #editSprintTitleBtn': function(e) {
     e.stopPropagation();
