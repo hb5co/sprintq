@@ -8,8 +8,6 @@ var randPassword = function() {
   return Math.random().toString(36);
 };
 
-console.log('Sprints found: ' + Sprints.find().count());
-
 Meteor.startup(function () {
   if (Sprints.find().count() === 0) {
 
