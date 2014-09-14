@@ -14,7 +14,9 @@ Template.editSprintTitle.rendered = function() {
   $('#' + editingTitle).editable({
     mode: 'inline',
     success: function(response, newValue) {
-      Sprints.update({_id: editingTitle}, {$set: {title: newValue}});
+      if (newValue !== '') {
+        Sprints.update({_id: editingTitle}, {$set: {title: newValue}});
+      }
       Session.set('editingSprintTitleId', false);
     }
   });
