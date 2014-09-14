@@ -23,7 +23,7 @@ Template.sprintsList.events({
     sprintId = this._id;
     
     // getting clicked button and it's table row
-    var archiveSprint = $(e.currentTarget).parent().parent();
+    var archiveSprint = $(e.currentTarget).parent().parent().parent().parent();
     
     archiveSprint.removeClass('highlight').addClass('animated fadeOutLeftBig archived');
 
