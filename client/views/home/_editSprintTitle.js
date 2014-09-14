@@ -1,18 +1,22 @@
 Template.editSprintTitle.events({
-  'submit #editSprintTitleForm': function(e) {
-    e.preventDefault();
-    var sprintId = Session.get('editingSprintTitleId');
-    var newTitle = $('#editSprintTitleInput').val();
-    Sprints.update({_id: sprintId}, {$set: {title: newTitle}});
+  'blur .editable-input': function() {
     Session.set('editingSprintTitleId', false);
   },
-  'keyup #editSprintTitleForm': function(e) {
+  'keypress .editable-input': function(e) {
     if (e.which === 27) {
       Session.set('editingSprintTitleId', false);
     }
-  },
-  'blur #editSprintTitleForm': function (e) {
-    e.preventDefault();
-    Session.set('editingSprintTitleId', false);
   }
 });
+
+Template.editSprintTitle.rendered = function() {
+  var editingTitle = Session.get('editingSprintTitleId'); 
+  $('#' + editingTitle).editable({
+    mode: 'inline',
+    success: function(response, newValue) {
+      Sprints.update({_id: editingTitle}, {$set: {title: newValue}});
+      Session.set('editingSprintTitleId', false);
+    }
+  });
+  $('#' + Session.get('editingSprintTitleId')).click();
+}
