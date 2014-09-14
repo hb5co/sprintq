@@ -15,10 +15,16 @@
           </div>
           {{#if currentUser}}
             <div class="col-sm-3">
-              <button id="archiveSprint" class="btn btn-primary pull-right">
-                <i class="fa fa-archive"></i> Archive
-              </button>
-              <button id="editSprintTitleBtn" class="btn btn-info pull-right">Edit</button>
+              <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                  <a id="editSprintTitleBtn" class="btn btn-info" title="Edit">
+                    <i class="fa fa-edit"></i></a>
+                </div>
+                <div class="btn-group">
+                  <a id="archiveSprint" class="btn btn-primary" title="Archive">
+                    <i class="fa fa-archive"></i></a>
+                </div>
+              </div>
             </div>
           {{/if}}
         </div>
