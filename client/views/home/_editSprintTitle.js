@@ -6,7 +6,10 @@ Template.editSprintTitle.events({
     if (e.which === 27) {
       Session.set('editingSprintTitleId', false);
     }
-  }
+  },
+  'submit form': function() {
+    Session.set('editingSprintTitleId', false);
+  }  
 });
 
 Template.editSprintTitle.rendered = function() {
