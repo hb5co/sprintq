@@ -1,7 +1,7 @@
 sprintQ
 =======
 
-An example application is at [sprintq.meteor.com](sprintq.meteor.com)!
+An example application is at [sprintq.meteor.com](https://sprintq.meteor.com)!
 
 Create listings of open source issues for sprints or other events
 
