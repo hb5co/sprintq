@@ -7,6 +7,12 @@ Template.sprintsList.editingSprintTitleId = function () {
   return Session.equals('editingSprintTitleId', this._id);
 }
 
+Template.sprintsList.helpers({
+  editingSprintTitleId: function() {
+    return Session.equals('editingSprintTitleId', this._id);
+  }
+});
+
 Template.sprintsList.loggedInColumnWidth = function() {
   if (Meteor.user()) {
     return 9;
