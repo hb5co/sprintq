@@ -4,5 +4,10 @@ Template.sprint.issueList = function () {
     var re = new RegExp(issueSearchQuery, 'i');
     return query.title.match(re);
   });
+  sprintIssues.map(function(doc, index, cursor) {
+    var i = _.extend(doc, {index: index});
+    return i;
+  });
+  console.log(sprintIssues);
   return sprintIssues;
 };
