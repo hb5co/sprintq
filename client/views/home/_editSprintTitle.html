@@ -1,9 +1,9 @@
 <template name="editSprintTitle">
-  <form role="form" id="editSprintTitleForm">
+  <form role="form" id="editSprintTitleForm" class="form-inline">
     <div class="form-group">
-      <div class="input-group col-xs-5">
-        <p id="{{_id}}" data-type="text" data-placeholder="{{title}}" data-rows="2">{{title}}</p>
-      </div>
+      <input id="{{_id}}" class="form-control" value="{{title}}" data-rows="2"/>
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="button" id="cancelEditingSprintTitle" class="btn btn-default">Cancel</button>
     </div>
   </form>
 </template>
