@@ -17,5 +17,5 @@ Template.editSprintTitle.events({
 });
 
 Template.editSprintTitle.rendered = function() {
-  $('#' + Session.get('editingSprintTitleId')).click();
+  $('#' + Session.get('editingSprintTitleId')).focus();
 }
