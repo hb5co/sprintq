@@ -9,10 +9,11 @@ Template.issue.helpers({
 })
 
 Template.issue.events({
-  'click [name=closed]': function (e, tmpl) {
-    var id = this._id;
+  'click [type=checkbox]': function (e, tmpl) {
+    var id = this.index;
     var closed = tmpl.find('input').checked;
-    Sprints.update({_id: id}, {
+    sprint = Template.parentData(1);
+    Sprints.update({_id: sprint._id}, {
       $set: {
         closed: closed
       }
