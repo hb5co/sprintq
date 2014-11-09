@@ -38,6 +38,7 @@ Template.sprintsList.events({
         archiveSprint.delay(250).slideUp(500, function(){
           Sprints.update({_id: sprintId}, {$set: {archived: true}});
         });
+        alertify.success("The sprint has been archived!");
       } else {
         alertify.log("Canceled sprint archiving.");
       }
