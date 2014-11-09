@@ -1,6 +1,6 @@
 Template.editSprintTitle.events({
-  'keypress .editable-input': function(e) {
-    if (e.which === 27) {
+  'keydown input': function(e) {
+    if (e.keyCode == 27) {
       Session.set('editingSprintTitleId', false);
     }
   },
