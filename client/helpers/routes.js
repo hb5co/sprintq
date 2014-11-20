@@ -1,5 +1,5 @@
 // Helper for current route name.
-UI.registerHelper('currentRouteName',function(){
+UI.registerHelper('currentRouteName',function() {
   return Router.current() ? Router.current().route.name : '';
 });
 
